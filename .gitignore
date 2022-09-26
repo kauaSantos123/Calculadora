@@ -1,52 +1,52 @@
-# Prerequisites
-*.d
+#include <stdio.h>
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
-
-# Linker output
-*.ilk
-*.map
-*.exp
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
-
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
-
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
-
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+int main(void) {
+  int op;
+  int num1;
+  int num2;
+  do{
+  printf("Feita por :Kauã dos santos da silva\nCurso:Analise e desenvolvimento de sistema\nUniversidade: La Salle\nMatricula:202211847\n");
+  printf("Bem vindo a minha calculadora\n");
+  printf("1 = Somar\n2 = Subtrair\n3 = Dividir\n4 = Multiplicar\n5 = Raiz quadrada\n6 = Potenciacao\n0 = Sair\nDigite um numero de acordo com oque deseja:");
+  scanf("%d", &op);
+  if(op > 0 && op <7){
+  printf("Digite um valor:");
+  scanf("%d",&num1);
+  printf("Digite outro valor que deseja (somar, subtrair,Potenciar,\nMultiplicar , etc)\nCaso queira Fazer raiz quadrada digite 0:  ");
+  scanf("%d",&num2);
+    }
+  switch(op){
+    case 0:
+      printf("SAINDO...\N");
+    break;
+    case 1:
+      printf("Soma: %d\n", num1 + num2);
+    break;
+    case 2:
+      printf("Subtracao: %d\n", num1 - num2);
+    break;
+    case 3:
+    while(num2 == 0){
+      printf("Nao existe divisao por zero\nDigite outro valor: ");
+      scanf("%d", &num2);
+    }
+      printf("Divisao: %d\n", num1 / num2);
+    break;
+    case 4:
+      printf("Multiplicacao: %d\n", num1 * num2);
+    break;
+    case 5:
+    while(num2 > 0){
+      printf("Por favor Digite 0: ");
+      scanf("%d", &num2);
+    }
+     printf("Sua raiz quadrada é; %.2f\n", sqrt(num1));
+    break;
+   case 6:
+      printf("Seu valor é: %.0f\n", pow(num1, num2));
+    break;
+    default:
+    printf("Opcao invalida.\nDigite outra opcao:  ");
+  }
+    }while (op != 0); 
+}
