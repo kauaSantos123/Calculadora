@@ -1,2 +1,2 @@
 # Calculadora
-Uma calculadora desenvolvida com funçoes
+Uma calculadora desenvolvida com funçoes pedida pelo professor.
